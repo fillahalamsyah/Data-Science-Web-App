@@ -71,6 +71,14 @@ Implementasi lengkap ML pipeline:
 4. **Buka browser**
    Aplikasi akan otomatis membuka di `http://localhost:8501`
 
+## 🌐 Demo Online
+
+Kamu bisa mencoba aplikasi ini tanpa instalasi di:
+
+➡️ [https://data-science-web-app.streamlit.app/](https://data-science-web-app.streamlit.app/)
+
+Cukup buka link di atas di browser, semua fitur utama dapat langsung digunakan secara gratis.
+
 ## 🚀 Cara Penggunaan
 
 ### 1. Beranda
