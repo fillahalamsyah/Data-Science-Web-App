@@ -333,10 +333,7 @@ def show_home():
     st.markdown("""
     <div style='text-align: center; color: #666; padding: 1rem;'>
         <p>
-            Made with ❤️ using Streamlit | 
-            <a href='#'>📧 Contact</a> | 
-            <a href='#'>📚 Documentation</a> | 
-            <a href='#'>🐛 Report Bug</a>
+            Made with ❤️ using Streamlit 
         </p>
         <p style='font-size: 0.9rem;'>
             © 2024 Data Science Web App. Happy Learning! 🚀

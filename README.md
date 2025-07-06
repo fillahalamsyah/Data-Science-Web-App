@@ -227,13 +227,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Plotly team untuk beautiful visualizations
 - Open source community untuk inspiration
 
-## 📞 Contact
-
-- **Developer**: [Your Name]
-- **Email**: [your.email@example.com]
-- **LinkedIn**: [your-linkedin-profile]
-- **GitHub**: [your-github-profile]
-
 ---
 
 **Happy Data Science Learning! 🚀📊🤖**
