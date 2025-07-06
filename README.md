@@ -21,8 +21,8 @@ Koleksi artikel lengkap tentang konsep dan metodologi Data Science:
 
 ### 📊 **Eksplorasi Data Interaktif**
 Tools untuk analisis mendalam dataset:
-- **Dataset Built-in**: Iris, Wine, Boston Housing, Diabetes, Breast Cancer
-- **Upload Custom Dataset**: Support CSV dan Excel
+- **Dataset Built-in**: Iris, Wine, Breast Cancer, Digits
+- **Upload Custom Dataset**: Support CSV, Excel, Parquet
 - **Univariate Analysis**: Distribusi dan statistik per variabel
 - **Bivariate Analysis**: Hubungan antar variabel
 - **Multivariate Analysis**: Correlation heatmap, pair plot, parallel coordinates
@@ -42,7 +42,7 @@ Implementasi lengkap ML pipeline:
 - **Data Processing**: Pandas, NumPy
 - **Visualization**: Matplotlib, Seaborn, Plotly
 - **Machine Learning**: Scikit-learn
-- **File Support**: CSV, Excel (openpyxl, xlrd)
+- **File Support**: CSV, Excel (openpyxl, xlrd), Parquet
 
 ## 📦 Instalasi
 
@@ -84,8 +84,8 @@ Implementasi lengkap ML pipeline:
 - Panduan step-by-step untuk setiap topik
 
 ### 3. Eksplorasi Data
-- **Built-in Dataset**: Pilih dari 5 dataset populer
-- **Upload File**: Upload dataset CSV/Excel Anda
+- **Built-in Dataset**: Pilih dari 4 dataset populer
+- **Upload File**: Upload dataset CSV/Excel/Parquet Anda
 - **Analisis**: Gunakan tabs untuk different types of analysis
 - **Export**: Download hasil analisis
 
@@ -102,9 +102,8 @@ Implementasi lengkap ML pipeline:
 |---------|------|---------|----------|--------|
 | Iris | Classification | 150 | 4 | Species (3 classes) |
 | Wine | Classification | 178 | 13 | Wine class (3 classes) |
-| Boston Housing | Regression | 506 | 13 | House price |
-| Diabetes | Regression | 442 | 10 | Disease progression |
 | Breast Cancer | Classification | 569 | 30 | Diagnosis (2 classes) |
+| Digits | Classification | 1797 | 64 | Handwritten digit (0-9) |
 
 ## 🤖 Algoritma Machine Learning
 
@@ -156,15 +155,30 @@ Implementasi lengkap ML pipeline:
 
 ```
 Data-Science-Web-App/
-├── app.py                 # Main Streamlit application
+├── app.py                 # Main Streamlit application (all-in-one)
+├── home.py                # Home page content
 ├── requirements.txt       # Python dependencies
-├── README.md             # Project documentation
-└── pages/                # Application pages
-    ├── __init__.py
-    ├── articles.py       # Data Science articles
-    ├── data_exploration.py  # Data exploration tools
-    └── model_training.py    # ML model training
+├── README.md              # Project documentation
+├── utils/                 # Modular data science utilities
+│   ├── __init__.py
+│   ├── data_loader.py         # Dataset loading & upload
+│   ├── data_analyzer.py       # EDA & summary tools
+│   ├── preprocessor.py        # Preprocessing (impute, encode, scale)
+│   ├── dimensionality_reducer.py # Dimensionality reduction (PCA, t-SNE, etc)
+│   └── model_manager.py       # Model selection, training, evaluation
+└── __pycache__/           # Python cache files
 ```
+
+- Semua fitur utama (navigasi, pipeline, EDA, training, export) ada di `app.py`.
+- Tidak ada folder `pages/` (semua satu file utama + modul di `utils/`).
+- Built-in dataset: iris, wine, breast_cancer, digits (lihat menu di aplikasi).
+- Upload support: CSV, XLSX, Parquet.
+- Sidebar: progress tracker & reset, navigasi pipeline, dan artikel.
+- EDA: overview, distribusi, korelasi, boxplot, pairplot, value counts, scatter dua fitur.
+- Preprocessing: imputasi, encoding, scaling, summary.
+- Dimensionality reduction: user-selectable features, banyak metode, visualisasi.
+- Model training: manual/select all/top correlated features, banyak algoritma, evaluasi, cross-validation.
+- Export: dataset original, processed, hasil reduksi, model (joblib).
 
 ## 🤝 Kontribusi
 
