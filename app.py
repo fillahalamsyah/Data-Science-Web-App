@@ -1262,10 +1262,10 @@ def show_progress_and_reset():
     st.sidebar.markdown("---")
     st.sidebar.markdown("### 📈 Progress Tracker")
     progress_data = {
-        "Load Data": st.session_state.df is not None,
-        "EDA": st.session_state.df is not None,  
-        "Preprocessing": st.session_state.df_processed is not None,
-        "Model Training": st.session_state.model is not None
+        "Load Data": st.session_state.get('df') is not None,
+        "EDA": st.session_state.get('df') is not None,  
+        "Preprocessing": st.session_state.get('df_processed') is not None,
+        "Model Training": st.session_state.get('model') is not None
     }
     for task, completed in progress_data.items():
         if completed:
